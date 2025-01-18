@@ -2,7 +2,7 @@
 --  See `:help vim.keymap.set()`
 
 -- Opens undo tree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Open [U]ndo Tree' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -21,8 +21,8 @@ vim.keymap.set('n', 'J', '<C-d>zz')
 vim.keymap.set('n', 'K', '<C-u>zz')
 
 vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { noremap = true })
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
-vim.keymap.set('v', '<leader>p', '"_dP')
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Go [P]re[V]ious' })
+vim.keymap.set('v', '<leader>p', '"_dP', { desc = '[P]aste while storing buffer' })
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
