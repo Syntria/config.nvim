@@ -25,7 +25,7 @@ return {
         map_keys = true,
         -- The key to press when hitting the accept keybinding but no completion is showing.
         -- Defaults to \t normally or <c-n> when a popup is showing.
-        accept_fallback = nil,
+        accept_fallback = '<Tab>',
         -- Key bindings for managing completions in virtual text mode.
         key_bindings = {
           -- Accept the current completion.
