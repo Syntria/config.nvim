@@ -7,7 +7,7 @@ return {
     },
     opts = {
       virtual_text = {
-        enabled = true,
+        enabled = false,
 
         -- Set to true if you never want completions to be shown automatically.
         manual = false,

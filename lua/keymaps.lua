@@ -1,12 +1,12 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+vim.keymap.set('n', 'H', vim.lsp.buf.hover, { desc = 'Hover Function Description' })
 -- Opens undo tree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Open [U]ndo Tree' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
