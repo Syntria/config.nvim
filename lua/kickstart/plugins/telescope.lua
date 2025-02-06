@@ -56,17 +56,30 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   layout_config = {
-        --     horizontal = {
-        --       preview_cutoff = 0,
-        --       preview_width = 0.49,
-        --     },
-        --   },
-        --   --   mappings = {
-        --   --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   --   },
-        -- },
+        defaults = {
+
+          preview = {
+            hide_on_startup = true,
+          },
+
+          layout_config = {
+            horizontal = {
+              preview_cutoff = 0,
+              preview_width = 0.8,
+            },
+          },
+
+          mappings = {
+            i = {
+              -- ['<c-enter>'] = 'to_fuzzy_refine',
+              ['<S-enter>'] = require('telescope.actions.layout').toggle_preview,
+            },
+
+            n = {
+              ['<S-enter>'] = require('telescope.actions.layout').toggle_preview,
+            },
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
