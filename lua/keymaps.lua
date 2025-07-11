@@ -2,6 +2,7 @@
 --  See `:help vim.keymap.set()`
 
 vim.keymap.set('n', 'H', vim.lsp.buf.hover, { desc = 'Hover Function Description' })
+
 -- Opens undo tree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Open [U]ndo Tree' })
 
@@ -18,8 +19,12 @@ vim.keymap.set('n', '<CR>', 'o<Esc>')
 vim.keymap.set('n', 'J', '<C-d>zz')
 vim.keymap.set('n', 'K', '<C-u>zz')
 
+-- Keep search terms in the middle of the page
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
 vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { noremap = true })
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Go [P]re[V]ious' })
+vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'Go [P]re[V]ious' })
 vim.keymap.set('v', '<leader>p', '"_dP', { desc = '[P]aste while storing buffer' })
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

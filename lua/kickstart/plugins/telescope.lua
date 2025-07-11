@@ -72,11 +72,13 @@ return {
           mappings = {
             i = {
               -- ['<c-enter>'] = 'to_fuzzy_refine',
-              ['<S-enter>'] = require('telescope.actions.layout').toggle_preview,
+
+              -- Shift+Enter to toggle preview
+              ['\033[\015;2u'] = require('telescope.actions.layout').toggle_preview,
             },
 
             n = {
-              ['<S-enter>'] = require('telescope.actions.layout').toggle_preview,
+              ['\033[\015;2u'] = require('telescope.actions.layout').toggle_preview,
             },
           },
         },

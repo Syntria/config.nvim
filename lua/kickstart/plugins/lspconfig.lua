@@ -22,6 +22,7 @@ return {
       { 'williamboman/mason.nvim', opts = {} },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
+      'nvim-java/nvim-java',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -176,8 +177,10 @@ return {
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+
       local servers = {
         clangd = {},
+
         gopls = {
           settings = {
             gopls = {
@@ -195,11 +198,13 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        csharp_ls = {},
 
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
           -- capabilities = {},
+          --
           settings = {
             Lua = {
               completion = {
